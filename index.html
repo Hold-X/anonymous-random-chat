@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeonChat - 霓虹匿名聊天</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes breathe {
+        0%, 100% { box-shadow: 0 0 10px 2px rgba(168, 85, 247, 0.4); border-color: rgba(168, 85, 247, 0.6); }
+        50% { box-shadow: 0 0 25px 5px rgba(236, 72, 153, 0.6); border-color: rgba(236, 72, 153, 0.8); }
+      }
+      .animate-breathe {
+        animation: breathe 3s ease-in-out infinite;
+      }
+      @keyframes radar {
+        0% { transform: scale(0.5); opacity: 0.8; }
+        100% { transform: scale(3); opacity: 0; }
+      }
+      .radar-wave {
+        position: absolute;
+        border: 2px solid rgba(34, 211, 238, 0.5);
+        border-radius: 50%;
+        animation: radar 3s linear infinite;
+        width: 100%;
+        height: 100%;
+      }
+      .radar-wave:nth-child(2) { animation-delay: 1s; }
+      .radar-wave:nth-child(3) { animation-delay: 2s; }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.3/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-950 text-slate-100 overflow-hidden select-none">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

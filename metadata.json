@@ -1,0 +1,8 @@
+{
+  "name": "NeonChat - Anonymous Random Chat",
+  "description": "A high-end, neon-themed anonymous chat application featuring glassmorphism, real-time matching simulations, and responsive design.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
